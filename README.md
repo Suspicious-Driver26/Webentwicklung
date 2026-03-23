@@ -5,3 +5,13 @@ Ein Tool, bei dem Benutzer ein individuelles Bingo Board mit wöchentlichen Aufg
 - Seitenliste mit Aufgabenliste (Hinzufügen/Entfernen von Aufgaben)
 - Bereich für Preisanzeige.
 - Countdown Timer mit Anzeige der Zeit bis zum nächsten Board Reset.
+### Erstellen und Bearbeiten
+- Aufgaben Hinzufügen: Texteingabe + "Hinzufügen" Button
+- Aufgabe bearbeiten: Auf Aufgabentext klicken, um direkt zu bearbeiten.
+- Aufgaben als erledigt markieren : Aufs Bingo Feld klicken.
+- Belohnungen konfigurien: Einstellungsseite mi Preisverwaltung.
+#### Löschen
+- Aufgaben entfernen: "x" oder Papierkorb Symbol neben jeder Aufgabe.
+- Board zurücksetzen: "Reset" Button
+- Belohnungen entfernen: "x" oder Papierkorb Symbol neben jeder Belohnung.
+
