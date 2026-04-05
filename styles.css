@@ -1,18 +1,16 @@
- p {
-     background: rgb(0, 0, 0);
-     color: white;
- }
- h4 {
-     background: rgb(89, 255, 0);
-     color: white;
+ .Title{
+    font-size: 300%;
+    border: 1px solid black;
+    display:inline-block;
+    padding: 5px;
+    margin-left: 41%;
+    margin-top: 50px;
+    
  }
 
-h3 {
-  font: Courier;
-  font: 25px Courier;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  padding: 0px 5px 0px 5px;
-  border-right: 2px solid white;
-  margin:20px
-}
+ .Bingo{
+margin-left: 500px;
+margin-top: 30px;
+font-size: 25px;
+
+ }
