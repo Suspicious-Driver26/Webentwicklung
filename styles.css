@@ -1,16 +1,53 @@
- .Title{
-    font-size: 300%;
+.Title {
+    font-size: 250%;
     border: 1px solid black;
-    display:inline-block;
+    display: inline-block;
     padding: 5px;
-    margin-left: 41%;
-    margin-top: 50px;
+    margin-left: 655px;
+    margin-top: 25px;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.Bingo {
+    margin-left: 536px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+
+.Bingo td {
+    width: auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.BUT {
+    font-size: 23px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(15, 140, 198);
+    border-color: rgb(0, 0, 0);
+    text-align: center;
+    width: 150px;
+    padding: 5px;
     
- }
+}
 
- .Bingo{
-margin-left: 500px;
-margin-top: 30px;
-font-size: 25px;
+.timer {
+    width: 200px;
+    padding: 20px;
+    background: black;
+    color: lime;
+    font-size: 35px;
+    font-family: monospace;
+    text-align: center;
+    border: 3px solid gray;
+    border-radius: 10px;
+    margin-left: 96px;
+    margin-top: 20px;
+}
 
- }
+  
+
+   

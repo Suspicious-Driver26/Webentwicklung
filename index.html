@@ -1,61 +1,79 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Task Bingo - Erledige deine Aufgaben mit Spaß" />
-    <meta name="keywords" content="Bingo, Aufgaben, Spiel" />
-    <meta name="author" content="Yakup Solmaz" />
-    <title>Bingo Task</title>
-     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1 class="Title">Task Bingo</h1> 
-    </header>
-    <main>
-      <div class="Bingo">
-          <table border="1" cellpadding="40" cellspacing="0">
-          <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td>12</td>
-            <td>13</td>
-            <td>14</td>
-            <td>15</td>
-          </tr>
-          <tr>
-            <td>16</td>
-            <td>17</td>
-            <td>18</td>
-            <td>19</td>
-            <td>20</td>
-          </tr>
-          <tr>
-            <td>21</td>
-            <td>22</td>
-            <td>23</td>
-            <td>24</td>
-            <td>25</td>
-          </tr>
-        </table>
-      </div>
-        
-      
 
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Task Bingo - Erledige deine Aufgaben mit Spaß" />
+  <meta name="keywords" content="Bingo, Aufgaben, Spiel" />
+  <meta name="author" content="Yakup Solmaz" />
+  <title>Bingo Task</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1 class="Title">Task Bingo</h1>
+  </header>
+  <main>
+    <div class="Bingo">
+      <table border="1" cellpadding="30" cellspacing="0" style="width: 450px;height: 450px;">
+        <tr>
+          <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+        </tr>
+      .</table>
+      <div class="timer">99:99</div>
+      <div>
+        <button class="BUT" style="position: relative; left: 30px; top: 20px;">Monthly</button>
+        <button class="BUT" style="position: relative; left: 135px; top: 20px;">Weekly</button>
+        <br>
+        <button class="BUT" style="position: relative; left: 30px; top: 30px;">Start</button>
+        <button class="BUT" style="position: relative; left: 135px; top: 30px;">Reset</button>
+      </div>
+    </div>
+  <div class="reward-panel">
+  <div class="reward-header">Belohnung</div>
+
+  <button class="add-task-btn">+</button>
+  <button class="remove-task-btn">-</button>
+
+  <div class="task-row">
+    <textarea class="task-input" rows="2" placeholder="Aufgabe schreiben..."></textarea>
+    <button class="delete-task-btn">✕</button>
+  </div>
+
+  <button class="random-task-btn">Randomize</button>
+</div>
+    
+  </main>
+</body>
+
 </html>
