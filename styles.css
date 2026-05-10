@@ -1,53 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    font-family: monospace;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+}
+
 .Title {
     font-size: 250%;
-    border: 1px solid black;
+    color: #ffffff;
+    background-color: #0f8cc6;
+    border: 5px solid #123456;
+    border-radius: 5px;
     display: inline-block;
-    padding: 5px;
-    margin-left: 655px;
-    margin-top: 25px;
-    text-align: center;
     padding: 10px;
-    border: 2px solid black;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#app-root {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
 }
 
 .Bingo {
-    margin-left: 536px;
-    margin-top: 10px;
-    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+    font-family: monospace;
 }
 
+.Bingo table {
+    margin: 0 auto;
+    border: 5px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    table-layout: fixed;
+}
 
 .Bingo td {
-    width: auto;
-    padding: 15px;
+    width: 20%;
+    padding: 12px 6px;
     text-align: center;
+    border: 2px solid rgba(85, 12, 157, 0.363);
+    border-radius: 4px;
+    font-size: 1rem;
+    word-break: break-word;
+    vertical-align: middle;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.Bingo td:hover {
+    background-color: #00fbff94;
+}
+
+.Bingo td.completed {
+    background-color: #4caf50;
+    color: white;
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
+.button-group {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .BUT {
     font-size: 23px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(15, 140, 198);
-    border-color: rgb(0, 0, 0);
+    color: #0f8cc6;
+    background-color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
     text-align: center;
     width: 150px;
     padding: 5px;
-    
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.BUT:hover {
+    background-color: rgb(15, 140, 198);
+    color: rgb(255, 255, 255);
 }
 
 .timer {
     width: 200px;
     padding: 20px;
+    margin: 20px auto;
     background: black;
     color: lime;
     font-size: 35px;
-    font-family: monospace;
     text-align: center;
     border: 3px solid gray;
     border-radius: 10px;
-    margin-left: 96px;
-    margin-top: 20px;
+    font-family: monospace;
 }
 
-  
+.panel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 450px;
+    padding: 15px;
+    background-color: #f1e9d2;
+    border: 2px solid black;
+    border-radius: 4px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
 
-   
+.panel-header {
+    font-size: 20px;
+    color: #0f8cc6;
+    background-color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+.panel-row {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+    gap: 5px;
+}
+
+.panel-input {
+    flex: 1;
+    padding: 5px;
+    resize: vertical;
+    font-family: monospace;
+}
+
+.add-btn {
+    font-size: 18px;
+    height: 25px;
+    width: 25px;
+    color: #CD201F;
+    background-color: #ffffff;
+    border: 1.5px solid #CD201F;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    flex-shrink: 0;
+}
+
+.add-btn:hover {
+    background-color: #CD201F;
+    color: #ffffff;
+}
+
+.item-list {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+.item-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 6px;
+    border-bottom: 1px solid #eee;
+}
+
+.item-list li span {
+    flex: 1;
+    padding: 5px 8px;
+    background: #fff;
+    border: 1.5px solid #ccc;
+    border-radius: 3px;
+    font-family: monospace;
+    word-break: break-word;
+    min-height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.item-list li .delete-item {
+    font-size: 18px;
+    height: 25px;
+    width: 25px;
+    color: #CD201F;
+    background-color: #ffffff;
+    border: 1.5px solid #CD201F;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+}
+
+.item-list li .delete-item:hover {
+    background-color: #CD201F;
+    color: #ffffff;
+}
+
+.random-btn {
+    width: 50%;
+    margin: 10px auto 0 auto;
+    padding: 8px;
+    font-size: 16px;
+    color: #0f8cc6;
+    background-color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.random-btn:hover {
+    background-color: rgb(15, 140, 198);
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 1100px) {
+    .panel {
+        width: 300px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .panel-header {
+        font-size: 16px;
+    }
+
+    .panel-input {
+        font-size: 13px;
+    }
+
+    .random-btn {
+        font-size: 14px;
+        width: 60%;
+    }
+
+    .Bingo table {
+        max-width: 500px;
+    }
+
+    .Bingo td {
+        padding: 8px 4px;
+        font-size: 0.85rem;
+    }
+
+    .BUT {
+        width: 130px;
+        font-size: 18px;
+    }
+
+    .timer {
+        width: 160px;
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    .item-list {
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .panel {
+        position: static;
+        width: 92%;
+        max-width: 450px;
+        margin: 10px auto;
+    }
+
+    .Bingo table {
+        max-width: 95%;
+        aspect-ratio: auto;
+        height: auto;
+    }
+
+    .Bingo td {
+        padding: 6px 2px;
+        font-size: 0.7rem;
+    }
+
+    .timer {
+        width: 140px;
+        font-size: 24px;
+        padding: 12px;
+    }
+
+    .BUT {
+        width: 110px;
+        font-size: 16px;
+    }
+
+    .button-group {
+        gap: 8px;
+    }
+
+    .random-btn {
+        font-size: 14px;
+        width: 60%;
+    }
+
+    .item-list {
+        max-height: 120px;
+    }
+}
+
+@media (max-width: 400px) {
+    .Title {
+        font-size: 180%;
+        padding: 8px;
+        margin-top: 15px;
+        margin-bottom: 12px;
+        border-width: 3px;
+    }
+
+    .Bingo table {
+        max-width: 98%;
+    }
+
+    .Bingo td {
+        padding: 4px 1px;
+        font-size: 0.6rem;
+    }
+
+    .timer {
+        width: 120px;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .BUT {
+        width: 90px;
+        font-size: 14px;
+    }
+
+    .panel {
+        width: 96%;
+        padding: 8px;
+    }
+
+    .item-list {
+        max-height: 100px;
+    }
+}
